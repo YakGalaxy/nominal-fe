@@ -1,14 +1,13 @@
 import './App.css'
-import { grommet, Box, Heading, Grommet, Paragraph } from "grommet";
+import { grommet, Grommet } from "grommet";
+import Simple from "./containers/Footer";
+
 
 function App() {
 
   return (
     <Grommet theme={grommet}>
-      <Box pad="small">
-        <Heading>Hello World</Heading>
-        <Paragraph>Hello from a Grommet page!</Paragraph>
-      </Box>
+      <Simple />
     </Grommet>
   );
 }
