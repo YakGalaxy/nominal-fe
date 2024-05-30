@@ -1,5 +1,5 @@
 import { Footer, Text } from "grommet";
-import { Icon } from "../components/Full-Screen-Toggle";
+import { Icon } from "../components/FullScreenToggle";
 
 
 export const Simple = () => (

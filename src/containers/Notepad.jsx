@@ -1,6 +1,6 @@
 import React from "react";
 import { Box } from "grommet";
-import MyEditor from "../components/Formatting-Bar";
+import MyEditor from "../components/FormattingBar";
 
 
 function Notepad() {
