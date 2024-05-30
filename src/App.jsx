@@ -3,6 +3,7 @@ import DarkModeToggle from './components/DarkModeToggle';
 import { grommet, Grommet } from "grommet";
 import Simple from "./containers/Footer";
 import Notepad from './containers/Notepad';
+import { SaveButton } from './components/SaveButton';
 
 function App() {
   
@@ -11,6 +12,7 @@ function App() {
     <Grommet theme={grommet}>
     <DarkModeToggle/>
       <Notepad />
+      <SaveButton /> 
       <Simple />
     </Grommet>
   );
