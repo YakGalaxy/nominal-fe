@@ -1,6 +1,6 @@
 import React from "react";
 import { Box } from "grommet";
-import MyEditor from "../components/FormattingBar";
+import CopyEditor from "../components/Editor";
 
 
 function Notepad() {
@@ -15,7 +15,7 @@ function Notepad() {
       background="brand"
     >
           Notepad Container
-          <MyEditor />
+          <CopyEditor />
     </Box>
   </Box>
   )
