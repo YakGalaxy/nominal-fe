@@ -1,5 +1,4 @@
-import React from "react";
-import { Box, Footer, Main, Text } from "grommet";
+import { Footer, Text } from "grommet";
 import { Icon } from "../components/Full-Screen-Toggle";
 
 

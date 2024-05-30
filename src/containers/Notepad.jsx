@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
+import { Box } from "grommet";
+import MyEditor from "../components/Formatting-Bar";
 
-import { Box, Text } from "grommet";
 
-export const Notepad = () => (
-  <Box align='center' pad="large">
+function Notepad() {
+  return (
+    <Box align='center' pad="large">
     <Box
       width="large"
       height="large"
@@ -12,9 +14,13 @@ export const Notepad = () => (
       justify="center"
       background="brand"
     >
-      Notepad Container
+          Notepad Container
+          <MyEditor />
     </Box>
   </Box>
-);
+  )
+}
 
-export default Notepad;
+export default Notepad
+
+

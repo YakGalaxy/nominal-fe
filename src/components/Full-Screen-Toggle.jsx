@@ -1,7 +1,6 @@
 import React from "react";
 import { Expand } from "grommet-icons";
-
-import { Box, Button, Text } from "grommet";
+import { Box, Button} from "grommet";
 
 export const Icon = () => (
   <Box align="center" pad="large">
