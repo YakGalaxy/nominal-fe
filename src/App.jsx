@@ -1,15 +1,12 @@
 import './App.css'
-import { grommet, Box, Heading, Grommet, Paragraph } from "grommet";
+import DarkModeToggle from './components/Dark-Mode-Toggle';
 
 function App() {
 
   return (
-    <Grommet theme={grommet}>
-      <Box pad="small">
-        <Heading>Hello World</Heading>
-        <Paragraph>Hello from a Grommet page!</Paragraph>
-      </Box>
-    </Grommet>
+<div className='App'>
+<DarkModeToggle/>
+</div>
   );
 }
 
