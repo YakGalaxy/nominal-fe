@@ -1,5 +1,5 @@
 import { Footer, Text } from "grommet";
-import { Icon } from "../components/FullScreenToggle";
+import FullScreenToggle from "../components/FullScreenToggle";
 
 
 export const Simple = () => (
@@ -7,7 +7,7 @@ export const Simple = () => (
       <Text textAlign="center" size="small">
         © 2024 Footer Container
             </Text>
-    <Icon />
+    <FullScreenToggle />
     </Footer>
 );
 
