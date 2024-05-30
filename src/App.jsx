@@ -1,5 +1,5 @@
 import './App.css'
-import DarkModeToggle from './components/Dark-ModeToggle';
+import DarkModeToggle from './components/DarkModeToggle';
 import { grommet, Grommet } from "grommet";
 import Simple from "./containers/Footer";
 import Notepad from './containers/Notepad';
