@@ -52,5 +52,3 @@ const FullScreenToggle = () => {
       />
   );
 };
-
-export default FullScreenToggle;

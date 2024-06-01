@@ -1,6 +1,6 @@
 import React from "react";
 import { Box } from "grommet";
-import CopyEditor from "../components/Editor";
+import { CopyEditor } from "../components/Editor";
 
 
 
@@ -21,7 +21,5 @@ function Notepad() {
   </Box>
   )
 }
-
-export default Notepad
 
 
