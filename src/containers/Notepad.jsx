@@ -7,14 +7,11 @@ import { SidebarContainer } from "./Sidebar";
 
 export function Notepad() {
   return (
-    <Box align="center" pad="large" direction="row" justify="center">
+    <Box align="center" pad="small" direction="row" justify="center" margin="auto">
       <SidebarContainer />
       <Box
-        width="large"
-        height="large"
+        height="100%"
         round="none"
-        align="center"
-        justify="center"
         pad="medium"
         background="background-front"
       >

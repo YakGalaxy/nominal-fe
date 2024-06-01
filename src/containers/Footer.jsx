@@ -3,7 +3,7 @@ import { FullScreenToggle } from "../components/FullScreenToggle";
 
 
 export const FooterContainer = () => (
-  <Footer pad="small" flex="grow" background="background-back">
+  <Footer pad="medium" background="background-back" as="footer">
     <Text textAlign="center" size="small">
       © 2024 Footer Container
     </Text>

@@ -9,7 +9,7 @@ export const SidebarContainer = () => {
   return (
     <Sidebar
       align="center"
-      height="large"
+      height="100%"
       Sidebar
       Container
       header={<UserImage />}

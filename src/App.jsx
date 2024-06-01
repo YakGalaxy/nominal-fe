@@ -17,11 +17,9 @@ const [darkMode, setDarkMode] = useState(false);
       themeMode={darkMode ? "dark" : "light"}
       background="background"
     >
-      <Page kind="full" background="background">
+      <Page kind="wide" background="background" height="100vh" flex="grow">
         <HeaderContainer darkMode={darkMode} setDarkMode={setDarkMode} />
-        <Main align="center" justify="center">
-          <Notepad />
-        </Main>
+        <Notepad />
         <FooterContainer />
       </Page>
     </Grommet>

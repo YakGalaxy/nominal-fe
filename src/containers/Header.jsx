@@ -5,7 +5,7 @@ import { TextResizeToggle } from '../components/TextResizeToggle';
 
 
 export const HeaderContainer = ({ darkMode, setDarkMode }) => (
-  <Header pad="small" background="background-back">
+  <Header pad="medium" background="background-back">
     <Nav direction="row">
       <Anchor label="Home" href="#" />
       <Anchor label="Profile" href="#" />
