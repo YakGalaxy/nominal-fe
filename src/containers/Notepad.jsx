@@ -7,13 +7,19 @@ import { SidebarContainer } from "./Sidebar";
 
 export function Notepad() {
   return (
-    <Box align="center" pad="small" direction="row" justify="center" margin="auto">
+    <Box
+      align="center"
+      pad="small"
+      direction="row"
+      justify="center"
+      margin="auto"
+    >
       <SidebarContainer />
       <Box
-        height="100%"
+        height="80vh"
         round="none"
         pad="medium"
-        background="background-front"
+        background="background-contrast"
       >
         <CopyEditor />
       </Box>

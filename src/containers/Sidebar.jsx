@@ -14,7 +14,7 @@ export const SidebarContainer = () => {
       Container
       header={<UserImage />}
       footer={<HelpButton hoverIndicator />}
-      background="background-contrast"
+      background="background-front"
     >
       <Nav gap="small">
         <Button icon={<Projects />} hoverIndicator />
