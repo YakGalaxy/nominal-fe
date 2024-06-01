@@ -4,7 +4,7 @@ import { CopyEditor } from "../components/Editor";
 
 
 
-function Notepad() {
+export function Notepad() {
   return (
     <Box align='center' pad="large">
     <Box

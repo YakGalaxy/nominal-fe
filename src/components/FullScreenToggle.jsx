@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Expand } from "grommet-icons";
 import { Button, Box } from "grommet";
 
-const FullScreenToggle = () => {
+export const FullScreenToggle = () => {
   const [isFullscreen, setIsFullscreen] = useState(false);
 
   const toggleFullscreen = () => {
