@@ -1,7 +1,6 @@
-import { useState } from "react";
 
-export const TextResizeToggle = () => {
-    const [fontSize, setFontSize] = useState(16);
+
+export const TextResizeToggle = ({ fontSize, setFontSize }) => {
 
     const increaseFontSize = () => {
         const newSize = Math.min(fontSize + 2, 36);
@@ -16,19 +15,16 @@ export const TextResizeToggle = () => {
       };
   
     return (
-      <div className="ToggleFont">
-        <input 
-          type="text" 
-          style={{ fontSize: `${fontSize}px` }} 
-          placeholder="Text" 
-        />
-        <div className="buttons">
-          <button onClick={increaseFontSize}>Increase</button>
-          <button onClick={decreaseFontSize}>Decrease</button>
-        </div>
-      </div>
-    );
-  }
+            <div className="ToggleFont">
+              <div className="buttons">
+                <button onClick={increaseFontSize}>Increase Font Size</button>
+                <button onClick={decreaseFontSize}>Decrease Font Size</button>
+              </div>
+            </div>
+          );
+        };
+    
+  
 
 
 
