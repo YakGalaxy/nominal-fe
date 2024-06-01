@@ -7,18 +7,19 @@ import { HelpButton } from '../components/HelpButton';
 
 export const SidebarContainer = () => {
   return (
-    <Sidebar align="center"
-      background="dark-1"
+    <Sidebar
+      align="center"
       height="large"
       Sidebar
       Container
       header={<UserImage />}
       footer={<HelpButton hoverIndicator />}
+      background="background-contrast"
     >
       <Nav gap="small">
         <Button icon={<Projects />} hoverIndicator />
         <Button icon={<Clock />} hoverIndicator />
-        <SaveButton hoverIndicator/>
+        <SaveButton hoverIndicator />
       </Nav>
     </Sidebar>
   );

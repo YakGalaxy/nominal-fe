@@ -3,27 +3,14 @@ import './DarkModeToggle.css';
 import { Box, Button, Text } from "grommet";
 import { Moon, Sun } from "grommet-icons";
 
-export const DarkModeToggle = () => {
-  const [isDark, setIsDark] = useState(false);
-
-  const toggleDarkMode = () => {
-    setIsDark(!isDark);
-    if (!isDark) {
-      document.documentElement.setAttribute('data-theme', 'dark');
-      console.log("dark data-theme set");
-    } else {
-      document.documentElement.removeAttribute('data-theme');
-      console.log("data-theme removed");
-    }
-  };
-
+export const DarkModeToggle = ({darkMode, setDarkMode}) => {
 
   return (
     <Box justify="end">
     <Button
       plain
-      icon={isDark ? <Moon /> : <Sun />}
-      onClick={toggleDarkMode}
+      icon={darkMode ? <Moon /> : <Sun />}
+      onClick={() => setDarkMode(!darkMode)}
       />
       </Box>
   );
