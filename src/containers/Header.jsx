@@ -1,6 +1,7 @@
 import React from 'react'
 import { Anchor, Header, Nav } from "grommet";
 import { DarkModeToggle } from "../components/DarkModeToggle";
+import { TextResizeToggle } from '../components/TextResizeToggle';
 
 
 export const HeaderContainer = () => (
@@ -9,6 +10,7 @@ export const HeaderContainer = () => (
       <Anchor label="Home" href="#" />
       <Anchor label="Profile" href="#" />
     </Nav>
+    <TextResizeToggle />
     <DarkModeToggle />
   </Header>
 );
