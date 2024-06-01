@@ -1,11 +1,11 @@
 import React from 'react'
 import { Box, Button } from "grommet";
-import { Save } from "grommet-icons";
+import { Help } from "grommet-icons";
 
-export const SaveButton = (props) => {
+export const HelpButton = (props) => {
   return (
     <Button
-      icon=<Save />
+      icon=<Help />
       onClick={() => {}}
       {...props}
       tip={{
@@ -21,7 +21,7 @@ export const SaveButton = (props) => {
             overflow="hidden"
             align="center"
           >
-            Save Document
+            Help
           </Box>
         ),
       }}
