@@ -2,7 +2,7 @@ import React from "react";
 import { Editor, EditorState } from "draft-js";
 import "draft-js/dist/Draft.css";
 
-export class CopyEditor extends React.Component {
+class CopyEditor extends React.Component {
   constructor(props) {
     super(props);
     this.state = { editorState: EditorState.createEmpty() };
@@ -52,3 +52,4 @@ const styles = {
   },
 };
 
+export default CopyEditor;
