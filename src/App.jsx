@@ -6,6 +6,7 @@ import { Notepad } from './containers/Notepad';
 import { SaveButton } from './components/SaveButton';
 import { HeaderContainer } from "./containers/Header";
 import { SidebarContainer } from './containers/Sidebar';
+import { TextResizeToggle}  from './components/TextResizeToggle';
 
 function App() {
   
@@ -14,9 +15,11 @@ function App() {
       <Page kind="full">
         <HeaderContainer />
         <DarkModeToggle />
+        <TextResizeToggle/>
           <Notepad />
         <SaveButton />
         <FooterContainer />
+      
       </Page>
     </Grommet>
   );
