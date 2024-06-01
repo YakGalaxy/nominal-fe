@@ -4,6 +4,7 @@ import "draft-js/dist/Draft.css";
 import { useState } from "react";
 import  { TextResizeToggle } from "../components/TextResizeToggle"
 
+import { Box } from 'grommet';
 
 function CopyEditor() {
   const [editorState, setEditorState] = useState(() => EditorState.createEmpty());
@@ -14,8 +15,7 @@ function CopyEditor() {
     console.log(editorState.toJS());
   };
   return (
-    <>
-    
+    <Box width="large" height="large">
        <div style={{ ...styles.editor, fontSize: `${fontSize}px` }} >
         <div style={styles.editor}>
           <Editor
@@ -32,21 +32,16 @@ function CopyEditor() {
         />
         <TextResizeToggle fontSize={fontSize} setFontSize={setFontSize} />
       </div>
-    </>
-  );
+      </Box>
+  )
 }
 
 const styles = {
   root: {
     fontFamily: "'Helvetica', sans-serif",
-    padding: 20,
-    width: 600,
   },
   editor: {
-    border: "1px solid #ccc",
     cursor: "text",
-    minHeight: 80,
-    padding: 10,
   },
   button: {
     marginTop: 10,

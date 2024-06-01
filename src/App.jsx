@@ -3,21 +3,27 @@ import { grommet, Grommet, Page, Box, Main } from "grommet";
 import { FooterContainer }  from "./containers/Footer";
 import { Notepad } from './containers/Notepad';
 import { HeaderContainer } from "./containers/Header";
-import { SidebarContainer } from './containers/Sidebar';
-import { TextResizeToggle}  from './components/TextResizeToggle';
+import { useState } from 'react';
 
 function App() {
   
+const [darkMode, setDarkMode] = useState(false);
+
+
   return (
-      
-    <Grommet theme={grommet} cssVars={true}>
-      <HeaderContainer />
-      <Page background="black" kind="full" fill="vertical" flex="grow">
-        <Main align='center' justify='center'>
+    <Grommet
+      theme={grommet}
+      cssVars={true}
+      themeMode={darkMode ? "dark" : "light"}
+      background="background"
+    >
+      <Page kind="full" background="background">
+        <HeaderContainer darkMode={darkMode} setDarkMode={setDarkMode} />
+        <Main align="center" justify="center">
           <Notepad />
         </Main>
+        <FooterContainer />
       </Page>
-      <FooterContainer />
     </Grommet>
   );
 }

@@ -15,9 +15,9 @@ export function Notepad() {
         round="none"
         align="center"
         justify="center"
-        background="light-6"
+        pad="medium"
+        background="background-front"
       >
-        Notepad Container
         <CopyEditor />
       </Box>
     </Box>

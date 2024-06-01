@@ -4,13 +4,13 @@ import { DarkModeToggle } from "../components/DarkModeToggle";
 import { TextResizeToggle } from '../components/TextResizeToggle';
 
 
-export const HeaderContainer = () => (
-  <Header background="dark-1" pad="medium">
+export const HeaderContainer = ({ darkMode, setDarkMode }) => (
+  <Header pad="small" background="background-back">
     <Nav direction="row">
       <Anchor label="Home" href="#" />
       <Anchor label="Profile" href="#" />
     </Nav>
     <TextResizeToggle />
-    <DarkModeToggle />
+    <DarkModeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
   </Header>
 );
