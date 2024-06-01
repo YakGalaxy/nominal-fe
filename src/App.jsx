@@ -4,21 +4,21 @@ import { FooterContainer }  from "./containers/Footer";
 import { Notepad } from './containers/Notepad';
 import { SaveButton } from './components/SaveButton';
 import { HeaderContainer } from "./containers/Header";
-import { TextResizeToggle } from './components/TextResizeToggle';
-import { DarkModeToggle } from './components/DarkModeToggle';
+<<<<<<< HEAD
+import { SidebarContainer } from './containers/Sidebar';
+import { TextResizeToggle}  from './components/TextResizeToggle';
+=======
+>>>>>>> 645510544455203fffce61489e89093049f984a1
 
 function App() {
   
   return (
-    <Grommet theme={grommet}>
-      <Page kind="full">
-        <HeaderContainer />
-        <DarkModeToggle />
-        <TextResizeToggle/>
+    <Grommet theme={grommet} cssVars={true}>
+      <HeaderContainer />
+      <Page background="black" kind="full" fill="vertical" flex="grow">
+        <Main align='center' justify='center'>
           <Notepad />
-        <SaveButton />
-        <FooterContainer />
-      
+        </Main>
       </Page>
       <FooterContainer />
     </Grommet>
