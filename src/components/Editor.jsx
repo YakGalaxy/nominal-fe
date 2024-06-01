@@ -2,28 +2,35 @@ import React from "react";
 import { Editor, EditorState } from "draft-js";
 import "draft-js/dist/Draft.css";
 import { useState } from "react";
+import  { TextResizeToggle } from "../components/TextResizeToggle"
+
 
 function CopyEditor() {
-  const [editorState, setEditorState] = useState(
-    () => EditorState.createEmpty(),
-  );
+  const [editorState, setEditorState] = useState(() => EditorState.createEmpty());
+  const [fontSize, setFontSize] = useState(16);
+  
 
+  const logState = () => {
+    console.log(editorState.toJS());
+  };
   return (
     <>
-      <div style={styles.root}>
+    
+       <div style={{ ...styles.editor, fontSize: `${fontSize}px` }} >
         <div style={styles.editor}>
           <Editor
             editorState={editorState}
             onChange={setEditorState}
             placeholder="Enter some text..."
-          />
+          />  
         </div>
         <input
-          onClick={console.log(editorState.toJS())}
-          style={styles.button}
+          onClick={logState}
+          style={{ ...styles.button, fontSize: `${fontSize}px` }}
           type="button"
           value="Log State"
         />
+        <TextResizeToggle fontSize={fontSize} setFontSize={setFontSize} />
       </div>
     </>
   );

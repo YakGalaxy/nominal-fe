@@ -15,7 +15,6 @@ function App() {
       <Page background="black" kind="full" fill="vertical" flex="grow">
         <Main align='center' justify='center'>
           <Notepad />
-          <TextResizeToggle/>
         </Main>
       </Page>
       <FooterContainer />
