@@ -1,12 +1,14 @@
 import React from "react";
 import { Box } from "grommet";
 import { CopyEditor } from "../components/Editor";
+import { SidebarContainer } from "./Sidebar";
 
 
 
 export function Notepad() {
   return (
-    <Box align='center' pad="large">
+    <Box align='center' pad="large" direction="row">
+    <SidebarContainer />
     <Box
       width="large"
       height="large"

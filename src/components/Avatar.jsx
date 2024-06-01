@@ -1,10 +1,11 @@
-import  { User } from 'grommet-icons';
+import React from 'react';
 
-const Avatar = () => {
+import { Avatar, Box } from 'grommet';
 
-<User color='plain' size='large' /> 
+export const UserImage = () => {
+  const src = "//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80";
 
-}
-
-
-export default Avatar
+  return (
+      <Avatar size="large" src={src} round={false} />
+  );
+};
