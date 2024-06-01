@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@chiragrupani/fullscreen-react": "^1.2.5",
+    "@draft-js-plugins/editor": "^4.1.4",
+    "@draft-js-plugins/inline-toolbar": "^4.2.1",
     "babel-polyfill": "^6.26.0",
     "draft-js": "^0.11.7",
     "grommet": "^2.37.0",
