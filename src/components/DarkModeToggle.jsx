@@ -19,11 +19,13 @@ export const DarkModeToggle = () => {
 
 
   return (
+    <Box justify="end">
     <Button
       plain
       icon={isDark ? <Moon /> : <Sun />}
       onClick={toggleDarkMode}
-    />
+      />
+      </Box>
   );
 }
 
