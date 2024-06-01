@@ -1,5 +1,7 @@
 import  { useState } from "react";
 import './DarkModeToggle.css';
+import { Box, Button, Text } from "grommet";
+import { Moon, Sun } from "grommet-icons";
 
 export const DarkModeToggle = () => {
   const [isDark, setIsDark] = useState(false);
@@ -8,21 +10,29 @@ export const DarkModeToggle = () => {
     setIsDark(!isDark);
     if (!isDark) {
       document.documentElement.setAttribute('data-theme', 'dark');
+      console.log("dark data-theme set");
     } else {
       document.documentElement.removeAttribute('data-theme');
+      console.log("data-theme removed");
     }
   };
 
+
   return (
-    <div className="DarkModeToggle">
-      <h1 className='title'>Hello</h1>
-      <div className='box'>
-        <h2>Random Box</h2>
-      </div>
-      <button onClick={toggleDarkMode}>
-        Toggle Dark Mode
-      </button>
-    </div>
+    <Box justify="end">
+    <Button
+      plain
+      icon={isDark ? <Moon /> : <Sun />}
+      onClick={toggleDarkMode}
+      />
+      </Box>
   );
 }
 
+
+    // <div className="DarkModeToggle">
+    //   <h1 className="title">Hello</h1>
+    //   <div className="box">
+    //     <h2>Random Box</h2>
+    //   </div>
+    // </div>;
