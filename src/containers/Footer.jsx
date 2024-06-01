@@ -3,12 +3,12 @@ import FullScreenToggle from "../components/FullScreenToggle";
 
 
 export const Simple = () => (
-    <Footer background="dark-1" justify="center" pad="small">
+  <Footer background="dark-1" pad="medium" flex="grow">
       <Text textAlign="center" size="small">
         © 2024 Footer Container
-            </Text>
+      </Text>
     <FullScreenToggle />
-    </Footer>
+  </Footer>
 );
 
 export default Simple;

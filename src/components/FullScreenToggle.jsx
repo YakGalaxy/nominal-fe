@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Expand } from "grommet-icons";
-import { Box, Button } from "grommet";
+import { Button, Box } from "grommet";
 
 const FullScreenToggle = () => {
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -28,13 +28,28 @@ const FullScreenToggle = () => {
   };
 
   return (
-    <Box align="center" pad="large">
       <Button
-        plain={false}
-        icon={<Expand />}
-        onClick={toggleFullscreen}
+      plain={false}
+      icon={<Expand size="small" />}
+      onClick={toggleFullscreen}
+      tip={{
+        plain: true,
+        dropProps: { align: { bottom: 'top' } },
+        content: (
+          <Box
+            pad="xxsmall"
+            elevation="small"
+            background="#EDEDED" // no opacity
+            round="xsmall"
+            margin="xsmall"
+            overflow="hidden"
+            align="center"
+          >
+            Toggle Fullscreen
+          </Box>
+        ),
+      }}
       />
-    </Box>
   );
 };
 
