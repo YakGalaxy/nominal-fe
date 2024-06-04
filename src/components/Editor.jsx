@@ -1,48 +1,46 @@
-import { Editor, EditorState } from "draft-js";
+import { EditorState } from "draft-js";
 import "draft-js/dist/Draft.css";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { Box } from 'grommet';
 import { FontSizeContext } from "../components/FontSizeProvider";
+import { Editor } from "react-draft-wysiwyg";
+import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+import { convertToHTML } from "draft-convert";
+import DOMPurify from "dompurify";
 
 function CopyEditor() {
   const { fontSize } = useContext(FontSizeContext);
-  const [editorState, setEditorState] = useState(() => EditorState.createEmpty());
+ const [editorState, setEditorState] = useState(() =>
+   EditorState.createEmpty()
+ );
+ const [convertedContent, setConvertedContent] = useState(null);
 
-  const logState = () => {
-    console.log(editorState.toJS());
+ useEffect(() => {
+   let html = convertToHTML(editorState.getCurrentContent());
+   setConvertedContent(html);
+ }, [editorState]);
+
+function createMarkup(html) {
+  return {
+    __html: DOMPurify.sanitize(html),
   };
-  return (
-    <Box width="large" height="large">
-       <div style={{ ...styles.editor, fontSize: `${fontSize}px` }} >
-        <div style={styles.editor}>
-          <Editor
-            editorState={editorState}
-            onChange={setEditorState}
-            placeholder="Enter some text..."
-          />  
-        </div>
-        <input
-          onClick={logState}
-          style={{ ...styles.button, fontSize: `${fontSize}px` }}
-          type="button"
-          value="Log State"
-        />
-      </div>
-      </Box>
-  )
 }
 
-const styles = {
-  root: {
-    fontFamily: "'Helvetica', sans-serif",
-  },
-  editor: {
-    cursor: "text",
-  },
-  button: {
-    marginTop: 10,
-    textAlign: "center",
-  },
-};
+  return (
+    <Box width="large" height="large">
+      <Editor
+        editorState={editorState}
+        onEditorStateChange={setEditorState}
+        wrapperClassName="wrapper-class"
+        editorClassName="editor-class"
+        toolbarClassName="toolbar-class"
+      />
+      <div
+        className="preview"
+        dangerouslySetInnerHTML={createMarkup(convertedContent)}
+      ></div>
+    </Box>
+  );
+}
 
 export default CopyEditor;
