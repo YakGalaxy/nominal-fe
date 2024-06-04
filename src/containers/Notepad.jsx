@@ -1,7 +1,6 @@
-import React from "react";
 import { Box } from "grommet";
 import CopyEditor from "../components/Editor";
-import { SidebarContainer } from "./Sidebar";
+import SidebarContainer from "./Sidebar";
 
 
 

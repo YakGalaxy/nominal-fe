@@ -1,6 +1,5 @@
-import  { useState } from "react";
 import './DarkModeToggle.css';
-import { Box, Button, Text } from "grommet";
+import { Box, Button } from "grommet";
 import { Moon, Sun } from "grommet-icons";
 
 export const DarkModeToggle = ({darkMode, setDarkMode}) => {

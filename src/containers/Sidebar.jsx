@@ -1,26 +1,33 @@
-import React from 'react'
-import { Box, Sidebar, Button, Nav } from "grommet";
-import { UserImage } from "../components/Avatar"
-import { Help, Projects, Clock } from "grommet-icons";
-import { SaveButton } from '../components/SaveButton';
-import { HelpButton } from '../components/HelpButton';
+import React from "react";
+import { Sidebar, Button, Nav } from "grommet";
+import { UserImage } from "../components/Avatar";
+import { Projects, Clock } from "grommet-icons";
+import { SaveButton } from "../components/SaveButton";
+import { HelpButton } from "../components/HelpButton";
+import TextZoomIn from "../components/TextZoomIn"; // Correct default import
+import TextZoomOut from "../components/TextZoomOut"; // Correct default import
+import { FontSizeProvider } from "../components/FontSizeProvider";
 
-export const SidebarContainer = () => {
+const SidebarContainer = () => {
   return (
-    <Sidebar
-      align="center"
-      height="100%"
-      Sidebar
-      Container
-      header={<UserImage />}
-      footer={<HelpButton hoverIndicator />}
-      background="background-front"
-    >
-      <Nav gap="small">
-        <Button icon={<Projects />} hoverIndicator />
-        <Button icon={<Clock />} hoverIndicator />
-        <SaveButton hoverIndicator />
-      </Nav>
-    </Sidebar>
+    <FontSizeProvider>
+      <Sidebar
+        align="center"
+        height="100%"
+        header={<UserImage />}
+        footer={<HelpButton hoverIndicator />}
+        background="background-front"
+      >
+        <Nav gap="small">
+          <Button icon={<Projects />} hoverIndicator />
+          <Button icon={<Clock />} hoverIndicator />
+          <SaveButton hoverIndicator />
+          <TextZoomIn />
+          <TextZoomOut />
+        </Nav>
+      </Sidebar>
+    </FontSizeProvider>
   );
-}
+};
+
+export default SidebarContainer;
