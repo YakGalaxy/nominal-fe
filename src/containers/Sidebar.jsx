@@ -13,7 +13,7 @@ const SidebarContainer = () => {
     <FontSizeProvider>
       <Sidebar
         align="center"
-        height="100%"
+        height="80vh"
         header={<UserImage />}
         footer={<HelpButton hoverIndicator />}
         background="background-front"
@@ -22,8 +22,8 @@ const SidebarContainer = () => {
           <Button icon={<Projects />} hoverIndicator />
           <Button icon={<Clock />} hoverIndicator />
           <SaveButton hoverIndicator />
-          <TextZoomIn />
-          <TextZoomOut />
+          <TextZoomIn hoverIndicator />
+          <TextZoomOut hoverIndicator />
         </Nav>
       </Sidebar>
     </FontSizeProvider>

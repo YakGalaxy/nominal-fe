@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Button } from "grommet";
+import { Button, Box } from "grommet";
 import { ZoomIn as ZoomInIcon } from "grommet-icons";
 import { FontSizeContext } from "./FontSizeProvider";
 
@@ -12,7 +12,11 @@ const TextZoomIn = () => {
     setFontSize(newSize);
   };
 
-  return <Button plain icon={<ZoomInIcon />} onClick={increaseFontSize} />;
+  return (
+    <Box align="center">
+      <Button plain icon={<ZoomInIcon />} onClick={increaseFontSize} />
+    </Box>
+  );
 };
 
 export default TextZoomIn;

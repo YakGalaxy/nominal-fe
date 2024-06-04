@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Button } from "grommet";
+import { Button, Box } from "grommet";
 import { ZoomOut as ZoomOutIcon } from "grommet-icons";
 import { FontSizeContext } from "./FontSizeProvider";
 
@@ -12,7 +12,11 @@ const TextZoomOut = () => {
     setFontSize(newSize);
   };
 
-  return <Button plain icon={<ZoomOutIcon />} onClick={decreaseFontSize} />;
+  return (
+    <Box align="center">
+      <Button plain icon={<ZoomOutIcon />} onClick={decreaseFontSize} />
+    </Box>
+  );
 };
 
 export default TextZoomOut;
