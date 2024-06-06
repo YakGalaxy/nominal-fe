@@ -157,7 +157,7 @@ function CopyEditor() {
           // handleKeyCommand={handleKeyCommand}
           // customStyleMap={styleMap}
           // blockStyleFn={myBlockStyleFn}
-          blockRenderMap={this.extendedBlockRenderMap}
+          // blockRenderMap={this.extendedBlockRenderMap}
         />
       </Box>
       <Box>
