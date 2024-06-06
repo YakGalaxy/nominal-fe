@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 
+
+const API_URL = "http://localhost:5005";
+
 // GET / READ
  
 function getDocumentData() {
@@ -13,13 +16,16 @@ function getDocumentData() {
 
             try {
 
-                const response = await axios.get('#');
+                const response = await axios.get(
+                  `${API_URL}/documents/:id`
+                );
 
                 setDocument(response.data);
+                console.log("Successfully got data", response);
 
             } catch (error) {
 
-                console.log(error);
+                console.log("Error receiving data", error);
             }
 
         };
@@ -37,19 +43,24 @@ function postDocumentData() {
         event.preventDefault();
 
         const newDocument = {
-            name: 'name',
+            id: 'id',
+            title: 'title',
+            description: 'description',
             content: 'content'
         };
 
         try {
         
-            const response = await axios.post('#', newDocument);
+            const response = await axios.post(
+              `${API_URL}/documents/:id`,
+              newDocument
+            );
 
-            console.log(response);
+            console.log("Successfully posted data", response);
 
         } catch (error) {
             
-            console.log(error);
+            console.log("Error posting data", error);
 
         }
 
@@ -64,7 +75,9 @@ function deleteDocumentData() {
     const deleteOneDocument = async () => {
             
           try {
-            const response = await axios.delete("#");
+            const response = await axios.delete(
+              `${API_URL}/documents/:id`
+            );
             console.log("Document deleted successfully:", response.data);
           } catch (error) {
             console.log("Error deleting document", error);
