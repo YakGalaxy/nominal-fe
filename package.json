@@ -17,6 +17,7 @@
     "dompurify": "^3.1.5",
     "draft-convert": "^2.1.13",
     "draft-js": "^0.11.7",
+    "draftjs-to-html": "^0.9.1",
     "grommet": "^2.37.0",
     "grommet-icons": "^4.12.1",
     "react": "^18.2.0",
