@@ -59,4 +59,16 @@ function postDocumentData() {
 
 // DELETE / DELETE
 
-axios.delete(url[, config])
+function deleteDocumentData() {
+
+    const deleteOneDocument = async () => {
+            
+          try {
+            const response = await axios.delete("#");
+            console.log("Document deleted successfully:", response.data);
+          } catch (error) {
+            console.log("Error deleting document", error);
+          }
+        };
+    
+}
