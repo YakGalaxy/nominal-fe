@@ -8,6 +8,7 @@ import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import { convertToHTML } from "draft-convert";
 import DOMPurify from "dompurify";
 import draftToHtml from "draftjs-to-html";
+import { postDocumentData, getDocumentData } from "../components/UtilityFunctions";
 
 
 // Initiliase Editor
@@ -135,14 +136,24 @@ function CopyEditor() {
 
   // Backend Sync
 
- const onSave = async () => {
-   const newMessage = {
-     message: JSON.stringify(convertToRaw(editorState.getCurrentContent())),
-   };
+  const onSave = async () => {
+    const newMessage = {
+      title: "Sample Title 5", // Replace with actual title
+      description: "Sample Description", // Replace with actual description
+      content: JSON.stringify(convertToRaw(editorState.getCurrentContent())),
+    };
 
-   //api call here with newMessage as request body
- };
- 
+    try {
+      await postDocumentData(newMessage);
+      console.log("Succesfully sent new message to postDocumentData function", newMessage)
+    } catch (error) {
+      console.error("Error saving document", error);
+    }
+  };
+
+
+
+  // Component return
 
   return (
     <div>
