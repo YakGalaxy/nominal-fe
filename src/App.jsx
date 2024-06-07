@@ -4,12 +4,16 @@ import { FooterContainer } from "./containers/Footer";
 import { Notepad } from "./containers/Notepad";
 import { HeaderContainer } from "./containers/Header";
 // import { FontSizeProvider } from "./components/FontSizeProvider";
+
 import "./index.css";
 import "./App.css"; 
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
+
+
+  
   return (
     <Grommet
       theme={grommet}
@@ -17,11 +21,11 @@ function App() {
       themeMode={darkMode ? "dark" : "light"}
       background="background"
     >
-        <Page kind="wide" background="background" height="100vh" flex="grow">
-          <HeaderContainer darkMode={darkMode} setDarkMode={setDarkMode} />
-          <Notepad />
-          <FooterContainer />
-        </Page>
+      <Page kind="wide" background="background" height="100vh" flex="grow">
+        <HeaderContainer darkMode={darkMode} setDarkMode={setDarkMode} />
+        <Notepad />
+        <FooterContainer />
+      </Page>
     </Grommet>
   );
 }

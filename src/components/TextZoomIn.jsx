@@ -14,7 +14,7 @@ const TextZoomIn = () => {
 
   return (
     <Box align="center">
-      <Button plain icon={<ZoomInIcon />} onClick={increaseFontSize} />
+      <Button disabled plain icon={<ZoomInIcon />} onClick={increaseFontSize} />
     </Box>
   );
 };

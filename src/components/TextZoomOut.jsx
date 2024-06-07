@@ -14,7 +14,12 @@ const TextZoomOut = () => {
 
   return (
     <Box align="center">
-      <Button plain icon={<ZoomOutIcon />} onClick={decreaseFontSize} />
+      <Button
+        disabled
+        plain
+        icon={<ZoomOutIcon />}
+        onClick={decreaseFontSize}
+      />
     </Box>
   );
 };

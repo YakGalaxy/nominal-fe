@@ -7,23 +7,33 @@ import { HelpButton } from "../components/HelpButton";
 import TextZoomIn from "../components/TextZoomIn"; // Correct default import
 import TextZoomOut from "../components/TextZoomOut"; // Correct default import
 import { FontSizeProvider } from "../components/FontSizeProvider";
+import { HtmlButton } from "../components/HtmlButton";
+import { EraseButton } from "../components/EraseButton";
+import { DocumentsButton } from "../components/DocumentsButton";
 
-const SidebarContainer = () => {
+const SidebarContainer = ({editorState, setEditorState }) => {
   return (
     <FontSizeProvider>
       <Sidebar
         align="center"
         height="80vh"
-        header={<UserImage />}
-        footer={<HelpButton hoverIndicator />}
-        background="background-front"
+        background="background"
+        className="fadeSidebar"
       >
         <Nav gap="small">
-          <Button icon={<Projects />} hoverIndicator />
-          <Button icon={<Clock />} hoverIndicator />
-          <SaveButton hoverIndicator />
-          <TextZoomIn hoverIndicator />
-          <TextZoomOut hoverIndicator />
+          <DocumentsButton hoverIndicator />
+          <HtmlButton />
+          <EraseButton
+            hoverIndicator
+            editorState={editorState}
+            setEditorState={setEditorState}
+          />
+          <SaveButton
+            hoverIndicator
+            editorState={editorState}
+            setEditorState={setEditorState}
+          />
+          <HelpButton hoverIndicator />
         </Nav>
       </Sidebar>
     </FontSizeProvider>

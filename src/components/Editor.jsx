@@ -8,12 +8,12 @@ import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import { convertToHTML } from "draft-convert";
 import DOMPurify from "dompurify";
 import draftToHtml from "draftjs-to-html";
-import { postDocumentData, getDocumentData } from "../components/UtilityFunctions";
+// import { postDocumentData, getDocumentData } from "../components/UtilityFunctions";
 
 
 // Initiliase Editor
 
-function CopyEditor() {
+function CopyEditor({editorState, setEditorState}) {
 
 
   // Use global context for font sizing
@@ -21,10 +21,10 @@ function CopyEditor() {
   // const { fontSize } = useContext(FontSizeContext);
 
 
-//  Set the Editor state
- const [editorState, setEditorState] = useState(() =>
-   EditorState.createEmpty()
-  );
+// //  Set the Editor state
+//  const [editorState, setEditorState] = useState(() =>
+//    EditorState.createEmpty()
+//   );
   
 // Convert the Editor's content to HTML
  const [convertedContent, setConvertedContent] = useState(null);
@@ -34,148 +34,45 @@ function CopyEditor() {
    setConvertedContent(html);
  }, [editorState]);
 
-
-  // Focus the editor
-
-// const editor = useRef(null);
-
-//     useEffect(() => {
-//       focusEditor();
-//     }, []);
-
-//     const focusEditor = () => {
-//       editor.current.focus();
-//     };
-
-  
-  
-// Create HTML markup
-  
-// function createMarkup(html) {
-//   return {
-//     __html: DOMPurify.sanitize(html),
-//   };
-//   }
-  
-  
-  // Handle key commands
-
-    // const handleKeyCommand = (command) => {
-    //   const newState = RichUtils.handleKeyCommand(editorState, command);
-    //   if (newState) {
-    //     setEditorState(newState);
-    //     return true;
-    //   }
-    //   return false;
-    // };
-  
-  
-  // Inline Styles
-
-  // const styleMap = {
-  //   CODE: {
-  //     backgroundColor: "rgba(0, 0, 0, 0.05)",
-  //     fontFamily: '"Inconsolata", "Menlo", "Consolas", monospace',
-  //     fontSize: 16,
-  //     padding: 2,
-  //   },
-  //   HIGHLIGHT: {
-  //     backgroundColor: "#F7A5F7",
-  //   },
-  //   UPPERCASE: {
-  //     textTransform: "uppercase",
-  //   },
-  //   LOWERCASE: {
-  //     textTransform: "lowercase",
-  //   },
-  //   CODEBLOCK: {
-  //     fontFamily: '"fira-code", "monospace"',
-  //     fontSize: "inherit",
-  //     background: "#ffeff0",
-  //     fontStyle: "italic",
-  //     lineHeight: 1.5,
-  //     padding: "0.3rem 0.5rem",
-  //     borderRadius: " 0.2rem",
-  //   },
-  //   SUPERSCRIPT: {
-  //     verticalAlign: "super",
-  //     fontSize: "80%",
-  //   },
-  //   SUBSCRIPT: {
-  //     verticalAlign: "sub",
-  //     fontSize: "80%",
-  //   },
-  // };
-  
-  // Block Styles
-  
-  // const myBlockStyleFn = (contentBlock) => {
-  //   const type = contentBlock.getType();
-  //   switch (type) {
-  //     case "blockQuote":
-  //       return "superFancyBlockquote";
-  //     case "leftAlign":
-  //       return "leftAlign";
-  //     case "rightAlign":
-  //       return "rightAlign";
-  //     case "centerAlign":
-  //       return "centerAlign";
-  //     case "justifyAlign":
-  //       return "justifyAlign";
-  //     default:
-  //       break;
-  //   }
-  // };
   
   // Clear Editor
   
-  const onClear = () => {
-    setEditorState(EditorState.createEmpty());
-  };
+  // const onClear = () => {
+  //   setEditorState(EditorState.createEmpty());
+  // };
 
 
   // Backend Sync
 
-  const onSave = async () => {
-    const newMessage = {
-      title: "Sample Title 5", // Replace with actual title
-      description: "Sample Description", // Replace with actual description
-      content: JSON.stringify(convertToRaw(editorState.getCurrentContent())),
-    };
+  // const onSave = async () => {
+  //   const newMessage = {
+  //     title: "Sample Title 5", // Replace with actual title
+  //     description: "Sample Description", // Replace with actual description
+  //     content: JSON.stringify(convertToRaw(editorState.getCurrentContent())),
+  //   };
 
-    try {
-      await postDocumentData(newMessage);
-      console.log("Succesfully sent new message to postDocumentData function", newMessage)
-    } catch (error) {
-      console.error("Error saving document", error);
-    }
-  };
-
+  //   try {
+  //     await postDocumentData(newMessage);
+  //     console.log("Succesfully sent new message to postDocumentData function", newMessage)
+  //   } catch (error) {
+  //     console.error("Error saving document", error);
+  //   }
+  // };
 
 
   // Component return
 
   return (
     <div>
-      <Box width="large" height="large">
+      <Box fill="true">
         <Editor
           editorState={editorState}
           onEditorStateChange={setEditorState}
           wrapperClassName="wrapper-class"
           editorClassName="editor-class"
           toolbarClassName="toolbar-class"
-          placeholder="The message goes here..."
-          // handleKeyCommand={handleKeyCommand}
-          // customStyleMap={styleMap}
-          // blockStyleFn={myBlockStyleFn}
-          // blockRenderMap={this.extendedBlockRenderMap}
+          placeholder="Start typing..."
         />
-      </Box>
-      <Box>
-        <Button label="Clear" onClick={onClear} />
-      </Box>
-      <Box>
-        <Button label="Save" onClick={onSave} />
       </Box>
       <div className="code-view">
         <p>HTML View </p>

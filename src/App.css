@@ -1,8 +1,36 @@
+
+* {
+  transition: all 0.5s, color 0.5s; 
+}
+
+button:hover {
+  background-color: rgba(221, 221, 221, 0.4);
+  color: rgb(0, 0, 0);
+}
+
+.fadeSidebar {
+  opacity: 0.5;
+  transition: opacity 1s ease-in-out;
+}
+
+.fadeSidebar:hover {
+  opacity: 1;
+}
+
+.fadeButton {
+  opacity: 0.5;
+  transition: opacity 500ms ease-in-out;
+}
+
+.fadeButton:hover {
+  opacity: 1;
+}
+
 /* Dark Mode Toggle */
 
 #DarkModeToggle {
   opacity: 0.5;
-  transition: opacity 250ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
 } 
 
 #DarkModeToggle:hover {
@@ -12,16 +40,14 @@
 /* Editor */
 
 .wrapper-class {
-  padding: 1rem;
-  border: 1px solid #ccc;
+   width: 100%;
+   overflow: hidden;
 }
 .editor-class {
-  background-color:lightgray;
   padding: 1rem;
-  border: 1px solid #ccc;
+  overflow: hidden;
 }
 .toolbar-class {
-  border: 1px solid #ccc;
 }
 
 .preview {
@@ -29,7 +55,7 @@
   margin-top: 1rem;
 }
 
-
+/* HTML View */
 
 .code-view {
   padding: 1rem;

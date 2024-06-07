@@ -1,12 +1,17 @@
-import React from 'react'
+import React from "react";
 import { Box, Button } from "grommet";
-import { Help } from "grommet-icons";
+import { Erase } from "grommet-icons";
+import { EditorState } from "draft-js";
 
-export const HelpButton = () => {
+export const EraseButton = ({ editorState, setEditorState }) => {
+  const onClear = () => {
+    setEditorState(EditorState.createEmpty());
+  };
+
   return (
     <Button
-      icon=<Help />
-      onClick={() => {}}
+      icon=<Erase />
+      onClick={onClear}
       tip={{
         plain: true,
         dropProps: { align: { bottom: "top" } },
@@ -20,10 +25,10 @@ export const HelpButton = () => {
             overflow="hidden"
             align="center"
           >
-            Help
+            Erase Editor
           </Box>
         ),
       }}
     />
   );
-}
+};

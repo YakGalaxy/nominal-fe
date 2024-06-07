@@ -1,12 +1,13 @@
-import React from 'react'
+import React from "react";
 import { Box, Button } from "grommet";
-import { Help } from "grommet-icons";
+import { Html5 } from "grommet-icons";
 
-export const HelpButton = () => {
+export const HtmlButton = (props) => {
   return (
     <Button
-      icon=<Help />
+      icon=<Html5 />
       onClick={() => {}}
+      {...props}
       tip={{
         plain: true,
         dropProps: { align: { bottom: "top" } },
@@ -20,10 +21,10 @@ export const HelpButton = () => {
             overflow="hidden"
             align="center"
           >
-            Help
+            Convert to HTML
           </Box>
         ),
       }}
     />
   );
-}
+};

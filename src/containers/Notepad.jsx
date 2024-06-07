@@ -1,10 +1,16 @@
 import { Box } from "grommet";
 import CopyEditor from "../components/Editor";
 import SidebarContainer from "./Sidebar";
-
-
+import { useState } from "react";
+import { EditorState, RichUtils, convertToRaw, convertFromRaw } from "draft-js";
 
 export function Notepad() {
+
+ const [editorState, setEditorState] = useState(() =>
+   EditorState.createEmpty()
+ );
+
+
   return (
     <Box
       align="center"
@@ -13,14 +19,18 @@ export function Notepad() {
       justify="center"
       margin="auto"
     >
-      <SidebarContainer />
+      <SidebarContainer
+        editorState={editorState}
+        setEditorState={setEditorState}
+      />
       <Box
         height="80vh"
+        width="70vw"
         round="none"
         pad="medium"
         background="background-contrast"
       >
-        <CopyEditor />
+        <CopyEditor editorState={editorState} setEditorState={setEditorState} />
       </Box>
     </Box>
   );

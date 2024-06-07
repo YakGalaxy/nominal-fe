@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
 import { Box, Button } from "grommet";
-import { Help } from "grommet-icons";
+import { Projects } from "grommet-icons";
 
-export const HelpButton = () => {
+export const DocumentsButton = () => {
+
   return (
     <Button
-      icon=<Help />
+      icon=<Projects />
       onClick={() => {}}
       tip={{
         plain: true,
@@ -20,10 +21,10 @@ export const HelpButton = () => {
             overflow="hidden"
             align="center"
           >
-            Help
+            Your Documents
           </Box>
         ),
       }}
     />
   );
-}
+};
