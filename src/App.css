@@ -8,6 +8,8 @@ button:hover {
   color: rgb(0, 0, 0);
 }
 
+/* Fade effects */
+
 .fadeSidebar {
   opacity: 0.5;
   transition: opacity 1s ease-in-out;
@@ -37,6 +39,12 @@ button:hover {
   opacity: 1;
 }
 
+/* Document Title */
+
+#Title {
+  padding-bottom: 2vh;
+}
+
 /* Editor */
 
 .wrapper-class {
@@ -47,8 +55,27 @@ button:hover {
   padding: 1rem;
   overflow: hidden;
 }
+
 .toolbar-class {
+  background: light-grey;
+  border: none;
+  color: rgb(72, 72, 72);
 }
+
+.rdw-option-wrapper {
+  background: none;
+  border: none;
+  color: white;
+  opacity: 0.5;
+  transition: opacity 500ms ease-in-out;
+}
+
+.rdw-option-wrapper:hover {
+  opacity: 1;
+  border: none;
+  box-shadow: none;
+}
+
 
 .preview {
   padding: 1rem;

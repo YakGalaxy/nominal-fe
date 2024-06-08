@@ -4,16 +4,12 @@ import { FooterContainer } from "./containers/Footer";
 import { Notepad } from "./containers/Notepad";
 import { HeaderContainer } from "./containers/Header";
 // import { FontSizeProvider } from "./components/FontSizeProvider";
-
 import "./index.css";
 import "./App.css"; 
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
-
-
-  
   return (
     <Grommet
       theme={grommet}

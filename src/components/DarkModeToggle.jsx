@@ -1,6 +1,7 @@
 import './DarkModeToggle.css';
 import { Box, Button } from "grommet";
 import { Moon, Sun } from "grommet-icons";
+import { setCssDataTheme } from './UtilityFunctions';
 
 export const DarkModeToggle = ({darkMode, setDarkMode}) => {
 
@@ -9,8 +10,10 @@ export const DarkModeToggle = ({darkMode, setDarkMode}) => {
       <Button
         plain
         icon={darkMode ? <Moon /> : <Sun />}
-        onClick={() => setDarkMode(!darkMode)}
         id="DarkModeToggle"
+        onClick={() => {
+          setDarkMode(!darkMode);
+        }}
       />
     </Box>
   );

@@ -25,7 +25,7 @@ export function Notepad() {
       />
       <Box
         height="80vh"
-        width="70vw"
+        width="60vw"
         round="none"
         pad="medium"
         background="background-contrast"

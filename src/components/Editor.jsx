@@ -9,7 +9,7 @@ import { convertToHTML } from "draft-convert";
 import DOMPurify from "dompurify";
 import draftToHtml from "draftjs-to-html";
 // import { postDocumentData, getDocumentData } from "../components/UtilityFunctions";
-
+import { DocumentTitle } from "./DocumentTitle";
 
 // Initiliase Editor
 
@@ -65,6 +65,7 @@ function CopyEditor({editorState, setEditorState}) {
   return (
     <div>
       <Box fill="true">
+        <DocumentTitle /> 
         <Editor
           editorState={editorState}
           onEditorStateChange={setEditorState}
