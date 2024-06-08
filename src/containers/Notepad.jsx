@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
 import { Box } from "grommet";
 
 // Components
@@ -7,16 +6,9 @@ import { Box } from "grommet";
 import CopyEditor from "../components/editor/Editor";
 import SidebarContainer from "./Sidebar";
 
-// Draft JS
-
-import { EditorState, RichUtils, convertToRaw, convertFromRaw } from "draft-js";
-
 // Notepad
 
-export function Notepad() {
-  const [editorState, setEditorState] = useState(() =>
-    EditorState.createEmpty()
-  );
+export function Notepad({ editorState, setEditorState }) {
 
   return (
     <Box

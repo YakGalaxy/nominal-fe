@@ -11,6 +11,7 @@ import { HeaderContainer } from "./containers/Header";
 // Editor Components
 
 import { HTMLPreview } from "./components/editor/HTMLPreview";
+import { EditorState } from "draft-js";
 
 // Pages
 
@@ -28,6 +29,9 @@ import "./App.css";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
+    const [editorState, setEditorState] = useState(() =>
+      EditorState.createEmpty()
+    );
 
   return (
     <Grommet
@@ -40,12 +44,52 @@ function App() {
         <Page kind="wide" background="background" height="100vh" flex="grow">
           <HeaderContainer darkMode={darkMode} setDarkMode={setDarkMode} />
           <Routes>
-            <Route path="/" element={<Notepad/>} />
-            <Route path="/about" element={<AboutPage/>}/>
-            <Route path="/help" element={<HelpPage/>}/>
-            <Route path="/SettingsPage" element={<SettingsPage/>} />
-            <Route path="/preview" element={<HTMLPreview/>} />
-            <Route path="*" element={<NotFoundPage/>} />
+            <Route
+              path="/"
+              element={
+                <Notepad
+                  editorState={editorState}
+                  setEditorState={setEditorState}
+                />
+              }
+            />
+            <Route path="/about" element={<AboutPage />} />
+            <Route
+              path="/help"
+              element={
+                <HelpPage
+                  editorState={editorState}
+                  setEditorState={setEditorState}
+                />
+              }
+            />
+            <Route
+              path="/SettingsPage"
+              element={
+                <SettingsPage
+                  editorState={editorState}
+                  setEditorState={setEditorState}
+                />
+              }
+            />
+            <Route
+              path="/preview"
+              element={
+                <HTMLPreview
+                  editorState={editorState}
+                  setEditorState={setEditorState}
+                />
+              }
+            />
+            <Route
+              path="*"
+              element={
+                <NotFoundPage
+                  editorState={editorState}
+                  setEditorState={setEditorState}
+                />
+              }
+            />
           </Routes>
           <FooterContainer />
         </Page>

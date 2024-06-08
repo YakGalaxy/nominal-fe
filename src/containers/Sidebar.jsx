@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 
-import React from "react";
-import { Sidebar, Button, Nav } from "grommet";
+import { Sidebar, Nav } from "grommet";
 
 // Buttons
 
@@ -10,12 +9,14 @@ import { HelpButton } from "../components/buttons/HelpButton";
 import { HtmlButton } from "../components/buttons/HtmlButton";
 import { EraseButton } from "../components/buttons/EraseButton";
 import { DocumentsButton } from "../components/buttons/DocumentsButton";
+import { HomeButton } from "../components/buttons/HomeButton";
 
 // Utilities
 
 import { FontSizeProvider } from "../components/utilities/FontSizeProvider";
 
 const SidebarContainer = ({ editorState, setEditorState }) => {
+
   return (
     <FontSizeProvider>
       <Sidebar
@@ -25,6 +26,7 @@ const SidebarContainer = ({ editorState, setEditorState }) => {
         className="fadeSidebar"
       >
         <Nav gap="small">
+          <HomeButton hoverIndicator/>
           <DocumentsButton hoverIndicator />
           <HtmlButton />
           <EraseButton

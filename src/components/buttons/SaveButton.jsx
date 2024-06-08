@@ -1,12 +1,26 @@
 import { Box, Button } from "grommet";
 import { Save } from "grommet-icons";
+
+// Utility Functions
+
 import {
   postDocumentData,
   getDocumentData,
 } from "../utilities/UtilityFunctions";
+
+// Draft JS
+
 import { EditorState, RichUtils, convertToRaw, convertFromRaw } from "draft-js";
 
+// React Router
+
+import { useLocation } from "react-router-dom";
+
 export const SaveButton = ({ editorState, setEditorState }) => {
+  
+    const location = useLocation();
+    const isRootPath = location.pathname === "/";
+
   const onSave = async () => {
     const newMessage = {
       title: "Sample Title 5", // Replace with actual title
@@ -24,9 +38,10 @@ export const SaveButton = ({ editorState, setEditorState }) => {
       console.error("Error saving document", error);
     }
   };
-
+  
   return (
     <Button
+      disabled={!isRootPath}
       icon=<Save />
       onClick={onSave}
       tip={{
