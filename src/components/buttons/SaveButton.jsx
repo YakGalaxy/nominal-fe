@@ -19,7 +19,8 @@ import { useLocation } from "react-router-dom";
 export const SaveButton = ({ editorState, setEditorState, documentTitle, setDocumentTitle }) => {
   
     const location = useLocation();
-    const isRootPath = location.pathname === "/";
+    const isRootPath =
+      location.pathname === "/" || location.pathname.startsWith("/documents/");
 
   const onSave = async () => {
     const newMessage = {

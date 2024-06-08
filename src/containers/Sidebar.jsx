@@ -26,7 +26,13 @@ const SidebarContainer = ({ editorState, setEditorState, documentTitle, setDocum
         className="fadeSidebar"
       >
         <Nav gap="small">
-          <HomeButton hoverIndicator />
+          <HomeButton
+            hoverIndicator
+            editorState={editorState}
+            setEditorState={setEditorState}
+            documentTitle={documentTitle}
+            setDocumentTitle={setDocumentTitle}
+          />
           <DocumentsButton
             hoverIndicator
             editorState={editorState}
@@ -34,11 +40,17 @@ const SidebarContainer = ({ editorState, setEditorState, documentTitle, setDocum
             documentTitle={documentTitle}
             setDocumentTitle={setDocumentTitle}
           />
-          <HtmlButton />
-          <EraseButton
-            hoverIndicator
+          <HtmlButton
             editorState={editorState}
             setEditorState={setEditorState}
+            documentTitle={documentTitle}
+            setDocumentTitle={setDocumentTitle}
+          />
+          <EraseButton
+            editorState={editorState}
+            setEditorState={setEditorState}
+            documentTitle={documentTitle}
+            setDocumentTitle={setDocumentTitle}
           />
           <SaveButton
             hoverIndicator
@@ -47,7 +59,13 @@ const SidebarContainer = ({ editorState, setEditorState, documentTitle, setDocum
             documentTitle={documentTitle}
             setDocumentTitle={setDocumentTitle}
           />
-          <HelpButton hoverIndicator />
+          <HelpButton
+            hoverIndicator
+            editorState={editorState}
+            setEditorState={setEditorState}
+            documentTitle={documentTitle}
+            setDocumentTitle={setDocumentTitle}
+          />
         </Nav>
       </Sidebar>
     </FontSizeProvider>
