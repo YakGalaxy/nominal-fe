@@ -1,9 +1,11 @@
 import React from 'react'
 import { Box, Button } from "grommet";
 import { Help } from "grommet-icons";
+import { NavLink } from "react-router-dom";
 
 export const HelpButton = () => {
   return (
+    <NavLink to="/help" style={{ textDecoration: 'none' }}>
     <Button
       icon=<Help />
       onClick={() => {}}
@@ -25,5 +27,6 @@ export const HelpButton = () => {
         ),
       }}
     />
+        </NavLink>
   );
 }
