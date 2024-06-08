@@ -16,15 +16,14 @@ import { EditorState, RichUtils, convertToRaw, convertFromRaw } from "draft-js";
 
 import { useLocation } from "react-router-dom";
 
-export const SaveButton = ({ editorState, setEditorState }) => {
+export const SaveButton = ({ editorState, setEditorState, documentTitle, setDocumentTitle }) => {
   
     const location = useLocation();
     const isRootPath = location.pathname === "/";
 
   const onSave = async () => {
     const newMessage = {
-      title: "Sample Title 5", // Replace with actual title
-      description: "Sample Description", // Replace with actual description
+      title: JSON.stringify({ documentTitle }),
       content: JSON.stringify(convertToRaw(editorState.getCurrentContent())),
     };
 

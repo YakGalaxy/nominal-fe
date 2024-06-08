@@ -15,7 +15,7 @@ import { HomeButton } from "../components/buttons/HomeButton";
 
 import { FontSizeProvider } from "../components/utilities/FontSizeProvider";
 
-const SidebarContainer = ({ editorState, setEditorState }) => {
+const SidebarContainer = ({ editorState, setEditorState, documentTitle, setDocumentTitle }) => {
 
   return (
     <FontSizeProvider>
@@ -26,8 +26,14 @@ const SidebarContainer = ({ editorState, setEditorState }) => {
         className="fadeSidebar"
       >
         <Nav gap="small">
-          <HomeButton hoverIndicator/>
-          <DocumentsButton hoverIndicator />
+          <HomeButton hoverIndicator />
+          <DocumentsButton
+            hoverIndicator
+            editorState={editorState}
+            setEditorState={setEditorState}
+            documentTitle={documentTitle}
+            setDocumentTitle={setDocumentTitle}
+          />
           <HtmlButton />
           <EraseButton
             hoverIndicator
@@ -38,6 +44,8 @@ const SidebarContainer = ({ editorState, setEditorState }) => {
             hoverIndicator
             editorState={editorState}
             setEditorState={setEditorState}
+            documentTitle={documentTitle}
+            setDocumentTitle={setDocumentTitle}
           />
           <HelpButton hoverIndicator />
         </Nav>

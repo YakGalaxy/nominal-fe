@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 export const HomeButton = () => {
 
   return (
-    <>
       <Link to="/">
         <Button
           icon=<HomeRounded />
@@ -29,6 +28,5 @@ export const HomeButton = () => {
           }}
         />
       </Link>
-    </>
   );
 };

@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
 
 const API_URL = "http://localhost:5005";
 
@@ -40,14 +39,3 @@ export const postDocumentData = async (newDocument) => {
   }
 };
 
-// DELETE / DELETE
-export const deleteDocumentData = async (docId) => {
-  try {
-    const response = await axios.delete(`${API_URL}/documents/${docId}`);
-    console.log("Document deleted successfully:", response.data);
-    return response.data;
-  } catch (error) {
-    console.log("Error deleting document", error);
-    throw error;
-  }
-};

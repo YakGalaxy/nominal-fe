@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { useState } from "react";
 import { Box } from "grommet";
 
 // Components
@@ -9,6 +10,8 @@ import SidebarContainer from "./Sidebar";
 // Notepad
 
 export function Notepad({ editorState, setEditorState }) {
+
+const [documentTitle, setDocumentTitle] = useState();
 
   return (
     <Box
@@ -21,6 +24,8 @@ export function Notepad({ editorState, setEditorState }) {
       <SidebarContainer
         editorState={editorState}
         setEditorState={setEditorState}
+        documentTitle={documentTitle}
+        setDocumentTitle={setDocumentTitle}
       />
       <Box
         height="80vh"
@@ -29,7 +34,12 @@ export function Notepad({ editorState, setEditorState }) {
         pad="medium"
         background="background-contrast"
       >
-        <CopyEditor editorState={editorState} setEditorState={setEditorState} />
+        <CopyEditor
+          editorState={editorState}
+          setEditorState={setEditorState}
+          documentTitle={documentTitle}
+          setDocumentTitle={setDocumentTitle}
+        />
       </Box>
     </Box>
   );

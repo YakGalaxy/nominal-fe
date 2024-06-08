@@ -28,7 +28,7 @@ import { DocumentTitle } from "./DocumentTitle";
 
 // Initiliase Editor
 
-function CopyEditor({ editorState, setEditorState }) {
+function CopyEditor({ editorState, setEditorState, documentTitle, setDocumentTitle }) {
   // Use global context for font sizing
 
   // const { fontSize } = useContext(FontSizeContext);
@@ -66,7 +66,7 @@ function CopyEditor({ editorState, setEditorState }) {
 
   return (
       <Box fill="true">
-        <DocumentTitle />
+      <DocumentTitle documentTitle={documentTitle} setDocumentTitle={setDocumentTitle} />
         <Editor
           editorState={editorState}
           onEditorStateChange={setEditorState}

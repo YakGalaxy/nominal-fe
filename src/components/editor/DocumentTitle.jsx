@@ -1,14 +1,14 @@
-import { useState } from 'react'
 import { Box, TextInput } from "grommet";
 
-export function DocumentTitle() {
+export function DocumentTitle({documentTitle, setDocumentTitle}) {
 
-const [value, setValue] = useState('');
-const onChange = (event) => setValue(event.target.value);
+  const handleTitleChange = (event) => {
+    setDocumentTitle(event.target.value);
+  };
 
   return (
       <Box>
-          <TextInput id="Title" size="xlarge" focusIndicator={false} plain={true} value={value} onChange={onChange} aria-label="Input Text" placeholder="Your Title"/>
+      <TextInput id="Title" size="xlarge" focusIndicator={false} plain={true} value={documentTitle}  onChange={handleTitleChange} aria-label="Input Text" placeholder="Your Title"/>
     </Box>
   );
 }

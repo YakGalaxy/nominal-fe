@@ -19,6 +19,7 @@ import { NotFoundPage } from "./components/pages/NotFoundPage"
 import { AboutPage } from "./components/pages/AboutPage";
 import { SettingsPage } from "./components/pages/SettingsPage";
 import { HelpPage } from "./components/pages/HelpPage";
+import { DocumentsPage } from "./components/pages/DocumentsPage";
 
 // Styling
 
@@ -31,7 +32,9 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
     const [editorState, setEditorState] = useState(() =>
       EditorState.createEmpty()
-    );
+  );
+  
+    const [documents, setDocuments] = useState([]);
 
   return (
     <Grommet
@@ -50,6 +53,17 @@ function App() {
                 <Notepad
                   editorState={editorState}
                   setEditorState={setEditorState}
+                />
+              }
+            />
+            <Route
+              path="/documents"
+              element={
+                <DocumentsPage
+                  editorState={editorState}
+                  setEditorState={setEditorState}
+                  documents={documents}
+                  setDocuments={setDocuments}
                 />
               }
             />
