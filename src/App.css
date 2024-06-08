@@ -49,10 +49,11 @@ button:hover {
 
 .wrapper-class {
    width: 100%;
-   overflow: hidden;
+   height: 100%;
 }
 .editor-class {
   padding: 1rem;
+  height: 100%;
   overflow: hidden;
 }
 
