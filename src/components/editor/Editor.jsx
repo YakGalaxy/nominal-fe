@@ -38,13 +38,6 @@ function CopyEditor({ editorState, setEditorState }) {
   //    EditorState.createEmpty()
   //   );
 
-  // Convert the Editor's content to HTML
-  const [convertedContent, setConvertedContent] = useState(null);
-
-  useEffect(() => {
-    let html = convertToHTML(editorState.getCurrentContent());
-    setConvertedContent(html);
-  }, [editorState]);
 
   // Clear Editor
 
@@ -72,7 +65,6 @@ function CopyEditor({ editorState, setEditorState }) {
   // Component return
 
   return (
-    <div>
       <Box fill="true">
         <DocumentTitle />
         <Editor
@@ -84,15 +76,6 @@ function CopyEditor({ editorState, setEditorState }) {
           placeholder="Start typing..."
         />
       </Box>
-      <div className="code-view">
-        <p>HTML View </p>
-        <textarea
-          className="text-area"
-          disabled
-          value={draftToHtml(convertToRaw(editorState.getCurrentContent()))}
-        />
-      </div>
-    </div>
   );
 }
 
