@@ -11,7 +11,7 @@ import { HtmlButton } from "../components/HtmlButton";
 import { EraseButton } from "../components/EraseButton";
 import { DocumentsButton } from "../components/DocumentsButton";
 
-const SidebarContainer = ({editorState, setEditorState }) => {
+const SidebarContainer = ({ editorState, setEditorState }) => {
   return (
     <FontSizeProvider>
       <Sidebar
