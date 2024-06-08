@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { Button, Box } from "grommet";
 import { ZoomIn as ZoomInIcon } from "grommet-icons";
 import { FontSizeContext } from "./FontSizeProvider";

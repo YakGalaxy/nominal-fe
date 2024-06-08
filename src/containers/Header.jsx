@@ -1,5 +1,5 @@
 import { Anchor, Header, Nav } from "grommet";
-import { DarkModeToggle } from "../components/DarkModeToggle";
+import { DarkModeToggle } from "../components/toggles/DarkModeToggle";
 
 
 export const HeaderContainer = ({ darkMode, setDarkMode }) => (

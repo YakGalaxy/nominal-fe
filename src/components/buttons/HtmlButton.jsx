@@ -1,4 +1,3 @@
-import React from "react";
 import { Box, Button } from "grommet";
 import { Html5 } from "grommet-icons";
 import { NavLink } from "react-router-dom";

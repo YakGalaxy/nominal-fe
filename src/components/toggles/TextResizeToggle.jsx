@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 export const TextResizeToggle = ({ fontSize, setFontSize }) => {
   const increaseFontSize = () => {
     const newSize = Math.min(fontSize + 2, 36);

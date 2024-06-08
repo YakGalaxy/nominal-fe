@@ -1,14 +1,12 @@
-import React from 'react'
 import { Box, Button } from "grommet";
 import { Save } from "grommet-icons";
 import {
   postDocumentData,
   getDocumentData,
-} from "./UtilityFunctions";
+} from "../utilities/UtilityFunctions";
 import { EditorState, RichUtils, convertToRaw, convertFromRaw } from "draft-js";
 
 export const SaveButton = ({ editorState, setEditorState }) => {
-
   const onSave = async () => {
     const newMessage = {
       title: "Sample Title 5", // Replace with actual title
@@ -26,7 +24,6 @@ export const SaveButton = ({ editorState, setEditorState }) => {
       console.error("Error saving document", error);
     }
   };
-
 
   return (
     <Button

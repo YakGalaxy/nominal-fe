@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { Button, Box } from "grommet";
 import { ZoomOut as ZoomOutIcon } from "grommet-icons";
-import { FontSizeContext } from "./FontSizeProvider";
+import { FontSizeContext } from "../utilities/FontSizeProvider";
 
 const TextZoomOut = () => {
   const { fontSize, setFontSize } = useContext(FontSizeContext);

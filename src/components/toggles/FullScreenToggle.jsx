@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Expand } from "grommet-icons";
 import { Button, Box } from "grommet";
 

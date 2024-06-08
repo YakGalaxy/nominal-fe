@@ -1,6 +1,6 @@
 import { Footer, Text } from "grommet";
-import { FullScreenToggle } from "../components/FullScreenToggle";
-import { GithubButton } from "../components/GithubButton";
+import { FullScreenToggle } from "../components/toggles/FullScreenToggle";
+import { GithubButton } from "../components/buttons/GithubButton";
 
 
 export const FooterContainer = () => (

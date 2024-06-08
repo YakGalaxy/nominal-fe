@@ -1,15 +1,19 @@
+/* eslint-disable react/prop-types */
+
 import React from "react";
 import { Sidebar, Button, Nav } from "grommet";
-import { UserImage } from "../components/Avatar";
-import { Projects, Clock } from "grommet-icons";
-import { SaveButton } from "../components/SaveButton";
-import { HelpButton } from "../components/HelpButton";
-import TextZoomIn from "../components/TextZoomIn"; // Correct default import
-import TextZoomOut from "../components/TextZoomOut"; // Correct default import
-import { FontSizeProvider } from "../components/FontSizeProvider";
-import { HtmlButton } from "../components/HtmlButton";
-import { EraseButton } from "../components/EraseButton";
-import { DocumentsButton } from "../components/DocumentsButton";
+
+// Buttons
+
+import { SaveButton } from "../components/buttons/SaveButton";
+import { HelpButton } from "../components/buttons/HelpButton";
+import { HtmlButton } from "../components/buttons/HtmlButton";
+import { EraseButton } from "../components/buttons/EraseButton";
+import { DocumentsButton } from "../components/buttons/DocumentsButton";
+
+// Utilities
+
+import { FontSizeProvider } from "../components/utilities/FontSizeProvider";
 
 const SidebarContainer = ({ editorState, setEditorState }) => {
   return (

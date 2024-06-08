@@ -1,12 +1,12 @@
-import React from "react";
 import { Box, Button } from "grommet";
-import { Projects } from "grommet-icons";
+import { Help } from "grommet-icons";
+import { NavLink } from "react-router-dom";
 
-export const DocumentsButton = () => {
-
+export const HelpButton = () => {
   return (
+    <NavLink to="/help" style={{ textDecoration: 'none' }}>
     <Button
-      icon=<Projects />
+      icon=<Help />
       onClick={() => {}}
       tip={{
         plain: true,
@@ -21,10 +21,11 @@ export const DocumentsButton = () => {
             overflow="hidden"
             align="center"
           >
-            Your Documents
+            Help
           </Box>
         ),
       }}
     />
+        </NavLink>
   );
-};
+}
