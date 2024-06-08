@@ -1,40 +1,34 @@
 import { useState } from "react";
 import { grommet, Grommet, Page } from "grommet";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { EditorState } from "draft-js";
 
 // Containers
-
 import { FooterContainer } from "./containers/Footer";
 import { Notepad } from "./containers/Notepad";
 import { HeaderContainer } from "./containers/Header";
 
-// Editor Components
-
-import { HTMLPreview } from "./components/editor/HTMLPreview";
-import { EditorState } from "draft-js";
-
 // Pages
-
-import { NotFoundPage } from "./components/pages/NotFoundPage"
+import { NotFoundPage } from "./components/pages/NotFoundPage";
 import { AboutPage } from "./components/pages/AboutPage";
 import { SettingsPage } from "./components/pages/SettingsPage";
 import { HelpPage } from "./components/pages/HelpPage";
 import { DocumentsPage } from "./components/pages/DocumentsPage";
+import { DocumentViewer } from "./components/pages/DocumentViewerPage";
+import { HTMLPreview } from "./components/editor/HTMLPreview"
 
 // Styling
-
 import "./index.css";
 import "./App.css";
 
 // Application
-
 function App() {
   const [darkMode, setDarkMode] = useState(false);
-    const [editorState, setEditorState] = useState(() =>
-      EditorState.createEmpty()
+  const [editorState, setEditorState] = useState(() =>
+    EditorState.createEmpty()
   );
-  
-    const [documents, setDocuments] = useState([]);
+  const [documents, setDocuments] = useState([]);
+  const [documentTitle, setDocumentTitle] = useState("");
 
   return (
     <Grommet
@@ -67,6 +61,18 @@ function App() {
                 />
               }
             />
+            <Route
+              path="/documents/:id"
+              element={
+                <DocumentViewer
+                  documents={documents}
+                  editorState={editorState}
+                  setEditorState={setEditorState}
+                  documentTitle={documentTitle}
+                  setDocumentTitle={setDocumentTitle}
+                />
+              }
+            />
             <Route path="/about" element={<AboutPage />} />
             <Route
               path="/help"
@@ -78,7 +84,7 @@ function App() {
               }
             />
             <Route
-              path="/SettingsPage"
+              path="/settings"
               element={
                 <SettingsPage
                   editorState={editorState}

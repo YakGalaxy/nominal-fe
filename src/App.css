@@ -47,6 +47,11 @@ button:hover {
 
 /* Editor */
 
+
+#documentTitle {
+  padding-bottom: 2.5vh;
+}
+
 .wrapper-class {
    width: 100%;
    height: 100%;

@@ -2,6 +2,7 @@ import { Box, Heading } from "grommet";
 import { useEffect } from "react";
 import { getAllDocuments } from "../utilities/GetDocumentsData";
 import { DocumentsList } from "../other/DocumentsList";
+import { convertFromRaw } from "draft-js";
 
 // Components
 import SidebarContainer from "../../containers/Sidebar";
@@ -43,7 +44,7 @@ export const DocumentsPage = ({
       >
         <Heading margin="none">Documents Page</Heading>
         {documents.length > 0 ? (
-          <DocumentsList documents={documents} onDelete={handleDelete} />
+          <DocumentsList documents={documents} onDelete={handleDelete} editorState={editorState} setEditorState={setEditorState} />
         ) : (
           <p>No documents available</p>
         )}
