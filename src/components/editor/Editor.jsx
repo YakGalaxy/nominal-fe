@@ -66,7 +66,7 @@ function CopyEditor({ editorState, setEditorState, documentTitle, setDocumentTit
 
   return (
       <Box fill="true">
-      <DocumentTitle documentTitle={documentTitle} setDocumentTitle={setDocumentTitle} />
+      <DocumentTitle documentTitle={documentTitle} setDocumentTitle={setDocumentTitle}/>
         <Editor
           editorState={editorState}
           onEditorStateChange={setEditorState}

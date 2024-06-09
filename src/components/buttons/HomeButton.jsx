@@ -30,7 +30,7 @@ export const HomeButton = () => {
               overflow="hidden"
               align="center"
             >
-              Head Home
+              Home
             </Box>
           ),
         }}

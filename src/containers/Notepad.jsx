@@ -33,6 +33,7 @@ const [documentTitle, setDocumentTitle] = useState();
         round="none"
         pad="medium"
         background="background-contrast"
+        id="content-box"
       >
         <CopyEditor
           editorState={editorState}

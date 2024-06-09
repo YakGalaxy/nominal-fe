@@ -36,21 +36,22 @@ export const DocumentViewer = ({
         editorState={editorState}
         setEditorState={setEditorState}
       />
-        <Box
+      <Box
         height="80vh"
         width="60vw"
         round="none"
         pad="medium"
-        background="background-contrast">      
-          
-      {document && (
-        <CopyEditor
-          editorState={editorState}
-          setEditorState={setEditorState}
-          documentTitle={documentTitle}
-          setDocumentTitle={setDocumentTitle}
-        />
-      )}
+        background="background-contrast"
+        id="content-box"
+      >
+        {document && (
+          <CopyEditor
+            editorState={editorState}
+            setEditorState={setEditorState}
+            documentTitle={documentTitle}
+            setDocumentTitle={setDocumentTitle}
+          />
+        )}
       </Box>
     </Box>
   );

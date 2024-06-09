@@ -8,6 +8,16 @@ button:hover {
   color: rgb(0, 0, 0);
 }
 
+.no-fade:hover {
+  background-color: transparent ;
+  color: none; 
+}
+
+/* #content-box {
+  overflow: auto;
+  resize: both ;
+} */
+
 /* Fade effects */
 
 .fadeSidebar {

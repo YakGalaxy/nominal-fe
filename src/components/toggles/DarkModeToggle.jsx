@@ -7,6 +7,7 @@ export const DarkModeToggle = ({ darkMode, setDarkMode }) => {
   return (
     <Box justify="end">
       <Button
+        className="no-fade"
         plain
         icon={darkMode ? <Moon /> : <Sun />}
         id="DarkModeToggle"
