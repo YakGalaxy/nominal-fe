@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const API_URL = "http://localhost:5005";
-
+const API_URL = "https://nominal-be.fly.dev:3000";
+// http://localhost:5005
 // GET / READ
 export const getDocumentData = (docId) => {
   const [document, setDocument] = useState(null);

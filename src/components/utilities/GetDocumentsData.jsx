@@ -1,7 +1,8 @@
 import axios from "axios";
 import { EditorState, convertFromRaw } from "draft-js";
 
-const API_URL = "http://localhost:5005";
+const API_URL = "https://nominal-be.fly.dev:3000";
+// http://localhost:5005
 
 // Helper function to parse JSON and extract documentTitle
 const parseDocumentTitle = (title) => {
