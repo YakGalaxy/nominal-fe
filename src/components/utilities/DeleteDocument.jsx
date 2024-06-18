@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const API_URL = "https://nominal-be.fly.dev:3000";
-// http://localhost:5005
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5005";
+
 
 // DELETE / DELETE
 export const deleteDocument = async (docId) => {
