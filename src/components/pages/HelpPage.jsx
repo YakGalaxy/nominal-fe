@@ -24,7 +24,13 @@ export const HelpPage = ({ editorState, setEditorState }) => {
         pad="medium"
         background="background-contrast"
       >
-        <Heading margin="none">Help Page</Heading>
+        <Heading
+          color="rgb(170, 170, 170)"
+          size="small"
+          margin={{ bottom: "2.5vh" }}
+        >
+          Help
+        </Heading>
       </Box>
     </Box>
   );

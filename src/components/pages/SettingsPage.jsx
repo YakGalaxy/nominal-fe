@@ -24,7 +24,9 @@ export const SettingsPage = ({ editorState, setEditorState }) => {
         pad="medium"
         background="background-contrast"
       >
-        <Heading margin="none">Help Page</Heading>
+        <Heading size="small" margin={{ bottom: "2.5vh" }}>
+          Help Page
+        </Heading>
       </Box>
     </Box>
   );

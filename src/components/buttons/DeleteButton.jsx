@@ -17,6 +17,8 @@ export const DeleteButton = ({ docId, onDelete }) => {
 
   return (
     <Button
+      className="delete-button"
+      margin={{ left: "10px" }}
       icon={<Trash />}
       onClick={deleteDocument}
       tip={{

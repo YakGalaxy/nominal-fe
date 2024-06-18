@@ -1,5 +1,6 @@
 import { Box, Button } from "grommet";
 import { Save } from "grommet-icons";
+import { Link } from "react-router-dom";
 
 // Utility Functions
 
@@ -40,27 +41,29 @@ export const SaveButton = ({ editorState, setEditorState, documentTitle, setDocu
   };
   
   return (
-    <Button
-      disabled={!isRootPath}
-      icon=<Save />
-      onClick={onSave}
-      tip={{
-        plain: true,
-        dropProps: { align: { bottom: "top" } },
-        content: (
-          <Box
-            pad="xxsmall"
-            elevation="small"
-            background="#EDEDED" // no opacity
-            round="xsmall"
-            margin="xsmall"
-            overflow="hidden"
-            align="center"
-          >
-            Save Document
-          </Box>
-        ),
-      }}
-    />
+    <Link to="/documents">
+      <Button
+        disabled={!isRootPath}
+        icon=<Save />
+        onClick={onSave}
+        tip={{
+          plain: true,
+          dropProps: { align: { bottom: "top" } },
+          content: (
+            <Box
+              pad="xxsmall"
+              elevation="small"
+              background="#EDEDED" // no opacity
+              round="xsmall"
+              margin="xsmall"
+              overflow="hidden"
+              align="center"
+            >
+              Save Document
+            </Box>
+          ),
+        }}
+      />
+    </Link>
   );
 };

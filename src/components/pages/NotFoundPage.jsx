@@ -24,7 +24,9 @@ export const NotFoundPage = ({ editorState, setEditorState }) => {
         pad="medium"
         background="background-contrast"
       >
-        <Heading margin="none">Not Found Page</Heading>
+        <Heading size="small" margin={{ bottom: "2.5vh" }}>
+          Not Found Page
+        </Heading>
       </Box>
     </Box>
   );

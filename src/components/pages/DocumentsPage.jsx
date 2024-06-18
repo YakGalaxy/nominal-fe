@@ -42,7 +42,7 @@ export const DocumentsPage = ({
         pad="medium"
         background="background-contrast"
       >
-        <Heading margin="none">Documents Page</Heading>
+        <Heading color="rgb(170, 170, 170)" size="small" margin={{bottom: '2.5vh'}}>Your Documents</Heading>
         {documents.length > 0 ? (
           <DocumentsList documents={documents} onDelete={handleDelete} editorState={editorState} setEditorState={setEditorState} />
         ) : (

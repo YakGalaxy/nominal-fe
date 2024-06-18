@@ -6,7 +6,7 @@ import { GithubButton } from "../components/buttons/GithubButton";
 export const FooterContainer = () => (
   <Footer pad="medium" background="background" as="footer">
     <GithubButton />
-    <Text textAlign="center" size="small">
+    <Text color="rgb(170, 170, 170)" textAlign="center" size="small">
       © 2024 - Nominal Text Editor
     </Text>
     <FullScreenToggle />

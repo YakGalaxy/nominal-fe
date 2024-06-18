@@ -45,9 +45,14 @@ export const HTMLPreview = ({ editorState, setEditorState }) => {
         pad="medium"
         background="background-contrast"
       >
-        <Heading margin="none">HTML Preview Page</Heading>
+        <Heading
+          color="rgb(170, 170, 170)"
+          size="small"
+          margin={{ bottom: "2.5vh" }}
+        >
+          HTML Preview
+        </Heading>
         <div className="code-view">
-          <p>HTML View </p>
           <textarea
             className="text-area"
             disabled

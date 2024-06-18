@@ -25,7 +25,7 @@ export const EraseButton = ({ editorState, setEditorState }) => {
             overflow="hidden"
             align="center"
           >
-            Erase Editor
+            Clear Editor
           </Box>
         ),
       }}

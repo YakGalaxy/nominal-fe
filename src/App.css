@@ -55,8 +55,11 @@ button:hover {
   padding-bottom: 2vh;
 }
 
-/* Editor */
+/* .delete-button:hover {
 
+} */
+
+/* Editor */
 
 #documentTitle {
   padding-bottom: 2.5vh;
@@ -101,15 +104,14 @@ button:hover {
 /* HTML View */
 
 .code-view {
-  padding: 1rem;
-
   margin: 10px;
 }
 
 .text-area {
   width: 100%;
-  background: black;
-  border: 1px solid #ccc;
+  padding: 10px;
+  background: rgb(0, 0, 0);
   color: white;
-  min-height: 200px;
+  resize: none;
+  border: none;
 }
