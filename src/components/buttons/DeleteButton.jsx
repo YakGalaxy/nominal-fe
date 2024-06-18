@@ -2,7 +2,7 @@ import { Box, Button } from "grommet";
 import { Trash } from "grommet-icons";
 import axios from "axios";
 
-const API_URL = "http://localhost:5005";
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5005";
 
 export const DeleteButton = ({ docId, onDelete }) => {
   const deleteDocument = async () => {
