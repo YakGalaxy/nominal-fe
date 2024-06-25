@@ -16,7 +16,7 @@ export const HelpPage = ({ editorState, setEditorState }) => {
         </Paragraph>
         
         <Box margin={{ bottom: "medium" }}>
-          <Heading level={3} color="rgb(255, 221, 87)" size="small">
+          <Heading level={3} color="#7D5A50" size="small">
             Frequently Asked Questions
           </Heading>
           <Accordion>
@@ -59,42 +59,42 @@ export const HelpPage = ({ editorState, setEditorState }) => {
         </Box>
         
         <Box margin={{ bottom: "medium" }}>
-          <Heading level={3} color="rgb(255, 221, 87)" size="small">
+          <Heading level={3} color="#7D5A50" size="small">
             Contact Information
           </Heading>
           <Box margin={{ bottom: "medium" }}>
-            <Heading level={4} color="rgb(255, 221, 87)" size="small">
+            <Heading level={4} color="#7D5A50" size="small">
               Phone
             </Heading>
             <Paragraph>
-              <Anchor href="tel:+0628391444" color="accent-1">+31(6) 28391444</Anchor>
+              <Anchor href="tel:+0628391444" color="#B4846C">+31(6) 28391444</Anchor>
             </Paragraph>
           </Box>
           
           <Box margin={{ bottom: "medium" }}>
-            <Heading level={4} color="rgb(255, 221, 87)" size="small">
+            <Heading level={4} color="#7D5A50" size="small">
               Email
             </Heading>
             <Paragraph>
-              <Anchor href="mailto:support@nominal.com" color="accent-1">support@nominal.com</Anchor>
+              <Anchor href="mailto:support@nominal.com" color="#B4846C">support@nominal.com</Anchor>
             </Paragraph>
           </Box>
           
           <Box>
-            <Heading level={4} color="rgb(255, 221, 87)" size="small">
+            <Heading level={4} color="#7D5A50" size="small">
               Social Media
             </Heading>
             <Box direction="row" gap="medium">
-              <Anchor href="https://www.facebook.com/nominal" target="_blank" rel="noopener noreferrer" color="accent-1">
+              <Anchor href="https://www.facebook.com/nominal" target="_blank" rel="noopener noreferrer" color="#E5B299">
                 Facebook
               </Anchor>
-              <Anchor href="https://www.twitter.com/nominal" target="_blank" rel="noopener noreferrer" color="accent-1">
+              <Anchor href="https://www.twitter.com/nominal" target="_blank" rel="noopener noreferrer" color="#E5B299">
                 Twitter
               </Anchor>
-              <Anchor href="https://www.instagram.com/nominal" target="_blank" rel="noopener noreferrer" color="accent-1">
+              <Anchor href="https://www.instagram.com/nominal" target="_blank" rel="noopener noreferrer" color="#E5B299">
                 Instagram
               </Anchor>
-              <Anchor href="https://www.linkedin.com/company/nominal" target="_blank" rel="noopener noreferrer" color="accent-1">
+              <Anchor href="https://www.linkedin.com/company/nominal" target="_blank" rel="noopener noreferrer" color="#E5B299">
                 LinkedIn
               </Anchor>
             </Box>
