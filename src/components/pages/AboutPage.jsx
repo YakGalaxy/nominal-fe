@@ -4,19 +4,21 @@ import Hagrid from './assets/hagrid.jpg';
 
 export const AboutPage = () => {
     return (
+        
         <div className="about-container">
+
             <div id="summary">
-                <h1>About Your Enchanted Text Editor</h1>
+                <h1>About Your Enchanted Text Editor Nominal</h1>
                 <p>
                     Welcome to the Text Editor, the most magical text editor in 
                     the wizarding world! Designed to bring a touch of enchantment to your writing, 
                     It combines the elegance of ancient spellbooks with the modern convenience of Muggle technology. With its user-friendly interface and powerful features, 
-                    The editor ensures your words flow as smoothly as a well-brewed potion.
+                    The editor ensures your words flow as smoothly a s a well-brewed potion.
                 </p>
             </div>
             
             <div id="creators">
-                <h2>The Creators</h2>
+                <h2>Meet The Wizards</h2>
                 <div className="creators">
                     <div className="creator">
                         <img src={Hagrid} alt="Michael Nguyen" />
@@ -34,6 +36,7 @@ export const AboutPage = () => {
                         <ul className="social-links">
                             <li><a href="https://www.linkedin.com/in/alexlaycy/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
                             <li><a href="https://github.com/alex-laycey" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+
                         </ul>
                     </div>
                 </div>

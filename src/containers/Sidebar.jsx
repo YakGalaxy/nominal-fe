@@ -10,7 +10,7 @@ import { HtmlButton } from "../components/buttons/HtmlButton";
 import { EraseButton } from "../components/buttons/EraseButton";
 import { DocumentsButton } from "../components/buttons/DocumentsButton";
 import { HomeButton } from "../components/buttons/HomeButton";
-
+import { AboutButton } from "../components/buttons/AboutButton";
 // Utilities
 
 import { FontSizeProvider } from "../components/utilities/FontSizeProvider";
@@ -33,6 +33,7 @@ const SidebarContainer = ({ editorState, setEditorState, documentTitle, setDocum
             documentTitle={documentTitle}
             setDocumentTitle={setDocumentTitle}
           />
+          <AboutButton/>
           <DocumentsButton
             hoverIndicator
             editorState={editorState}
