@@ -67,7 +67,7 @@ export const HelpPage = ({ editorState, setEditorState }) => {
               Phone
             </Heading>
             <Paragraph>
-              <Anchor href="tel:+0628391444" color="accent-1">+1 (234) 567-890</Anchor>
+              <Anchor href="tel:+0628391444" color="accent-1">+31(6) 28391444</Anchor>
             </Paragraph>
           </Box>
           
