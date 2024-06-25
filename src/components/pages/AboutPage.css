@@ -1,16 +1,25 @@
 .about-container {
     max-width: 1200px;
-    margin: 20px auto;
+    margin:0px auto;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
 }
 
-.about-container h1, .about-container h2 {
+.about-container h1 {
     font-family: 'Georgia', serif;
     color: #ffdd57;
     text-align: center;
-}
+    margin-bottom: 20px; 
+  }
+  
+  .about-container h2 {
+    font-family: 'Georgia', serif;
+    color: #ffdd57;
+    text-align: center;
+    margin-top: 60px; 
+    margin-bottom: 70px;
+  }
 
 .about-container p {
     font-family: 'Verdana', sans-serif;
@@ -20,14 +29,17 @@
 
 .about-container .creators {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    gap: 100px;
     margin-top: 20px;
+    margin-bottom: 40px;
 }
 
 .about-container .creator {
     text-align: center;
     margin-bottom: 20px;
+    flex: 1;
 }
 
 .about-container .creator img {
