@@ -1,7 +1,6 @@
-import { Box, Heading } from "grommet";
-
+import { Box, Heading, Image } from "grommet";
+// import { Notfound } from '../'
 // Components
-
 import SidebarContainer from "../../containers/Sidebar";
 
 export const NotFoundPage = ({ editorState, setEditorState }) => {
@@ -27,6 +26,7 @@ export const NotFoundPage = ({ editorState, setEditorState }) => {
         <Heading size="small" margin={{ bottom: "2.5vh" }}>
           Not Found Page
         </Heading>
+        <Image src="../" alt="Not Found" fit="cover" />
       </Box>
     </Box>
   );
